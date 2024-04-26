@@ -47,12 +47,6 @@ jobs:
         if: steps.checkTag.outputs.exists == 'true'
         run: exit 1
 
-      - name: Publish to Modrinth
-        run: ./gradlew modrinth
-
-      - name: Publish to CurseForge
-        run: ./gradlew curseforge
-
       - name: Publish to GitHub Releases
         uses: ncipollo/release-action@v1
         with:
