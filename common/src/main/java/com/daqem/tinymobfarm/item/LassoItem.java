@@ -41,13 +41,13 @@ public class LassoItem extends Item {
 		Level level = player.level();
 		CompoundTag nbt = NBTHelper.getBaseTag(stack);
 
-		// Cannot capture boss.
-		if (!target.canChangeDimensions()) {
-			if (!level.isClientSide()) {
-				player.sendSystemMessage(TinyMobFarm.translatable("error.cannot_capture_boss"));
-			}
-			return InteractionResult.SUCCESS;
-		}
+		// // Cannot capture boss.
+		// if (!target.canChangeDimensions()) {
+		// 	if (!level.isClientSide()) {
+		// 		player.sendSystemMessage(TinyMobFarm.translatable("error.cannot_capture_boss"));
+		// 	}
+		// 	return InteractionResult.SUCCESS;
+		// }
 
 		if (!level.isClientSide()) {
 			CompoundTag mobData = target.saveWithoutId(new CompoundTag());
